@@ -1,4 +1,4 @@
-# ld-agent-python
+# ld-agent-python 🐍
 
 **Dynamic linking for agentic systems in Python**
 
