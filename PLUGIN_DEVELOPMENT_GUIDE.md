@@ -2,6 +2,60 @@
 
 This document defines the standard architecture and interface requirements for ld-agent plugins. Follow this specification to ensure your plugin is compatible with the ld-agent ecosystem and can be automatically documented, loaded, and managed.
 
+Note: There is a 'validate_plugin.py' module in the 'plugins' folder that will validate your plugins to ensure it matches the specification, and will give warnings and errors if it does not.
+
+Example:
+
+```
+============================================================
+VALIDATION RESULTS FOR: discord_notifier
+============================================================
+❌ PLUGIN HAS ERRORS
+
+Summary:
+  ✅ Passed checks: 26
+  ⚠️  Warnings: 5
+  ❌ Errors: 1
+
+✅ PASSED CHECKS:
+  ✓ _module_info dictionary exists
+  ✓ _module_info.name exists
+  ✓ _module_info.description exists
+  ✓ _module_info.author exists
+  ✓ _module_info.version exists
+  ✓ _module_info.platform exists
+  ✓ _module_info.python_requires exists
+  ✓ _module_info.dependencies exists
+  ✓ _module_info.environment_variables exists
+  ✓ Version format looks valid
+  ✓ Platform value is valid
+  ✓ Dependencies is a list
+  ✓ Environment variables is a dictionary
+  ✓ Environment variable 'DISCORD_NOTIFIER_WEBHOOK_URL.description' exists
+  ✓ Environment variable 'DISCORD_NOTIFIER_WEBHOOK_URL.default' exists
+  ✓ Environment variable 'DISCORD_NOTIFIER_WEBHOOK_URL.required' exists
+  ✓ Environment variable 'DISCORD_NOTIFIER_ENABLED.description' exists
+  ✓ Environment variable 'DISCORD_NOTIFIER_ENABLED.default' exists
+  ✓ Environment variable 'DISCORD_NOTIFIER_ENABLED.required' exists
+  ✓ Environment variable 'DISCORD_NOTIFIER_BOT_NAME.description' exists
+  ✓ Environment variable 'DISCORD_NOTIFIER_BOT_NAME.default' exists
+  ✓ Environment variable 'DISCORD_NOTIFIER_BOT_NAME.required' exists
+  ✓ _module_exports dictionary exists
+  ✓ _module_exports has content
+  ✓ Found 1 items in 'tools' category
+  ✓ Tool 'send_discord_notification' is callable
+
+⚠️  WARNINGS:
+  ⚠️  Function 'send_discord_notification' missing return type annotation
+  ⚠️  Parameter 'message' in 'send_discord_notification' missing type annotation
+  ⚠️  Parameter 'title' in 'send_discord_notification' missing type annotation
+  ⚠️  Parameter 'bot_name' in 'send_discord_notification' missing type annotation
+  ⚠️  Module missing documentation
+
+❌ ERRORS:
+  ❌ Function 'send_discord_notification' missing docstring
+```
+
 ## 📋 Table of Contents
 
 1. [Architecture Overview](#architecture-overview)
