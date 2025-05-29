@@ -267,11 +267,19 @@ class PluginValidator:
     
     def _validate_documentation(self, module):
         """Validate documentation requirements."""
-        # This is a basic check - in a real implementation, you might check for README files, etc.
-        if hasattr(module, '__doc__') and module.__doc__:
-            self.passed_checks.append("✓ Module has documentation")
+        # Check for README.md file in the plugin directory
+        module_file = getattr(module, '__file__', None)
+        if module_file:
+            # Get the directory containing the module
+            module_dir = Path(module_file).parent
+            readme_path = module_dir / 'README.md'
+            
+            if readme_path.exists():
+                self.passed_checks.append("✓ Module has documentation (README.md)")
+            else:
+                self.warnings.append("Module missing documentation (no README.md found)")
         else:
-            self.warnings.append("Module missing documentation")
+            self.warnings.append("Module missing documentation (could not determine module path)")
     
     def _get_results(self):
         """Get validation results."""
