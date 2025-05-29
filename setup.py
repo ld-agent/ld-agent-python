@@ -18,7 +18,7 @@ setup(
     description="Dynamic linking for agentic systems in Python",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/your-org/ld-agent",
+    url="https://github.com/ld-agent/ld-agent-python",
     packages=find_packages(),
     python_requires=">=3.10",
     install_requires=[
@@ -59,9 +59,9 @@ setup(
     ],
     keywords="ld-agent dynamic-linking ai agents plugins composable-ai mcp",
     project_urls={
-        "Bug Reports": "https://github.com/your-org/ld-agent/issues",
-        "Source": "https://github.com/your-org/ld-agent",
-        "Documentation": "https://github.com/your-org/ld-agent/blob/main/README.md",
+        "Bug Reports": "https://github.com/ld-agent/ld-agent-python/issues",
+        "Source": "https://github.com/ld-agent/ld-agent-python",
+        "Documentation": "https://github.com/ld-agent/ld-agent-python/blob/main/README.md",
     },
     include_package_data=True,
 ) 
