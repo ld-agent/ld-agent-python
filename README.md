@@ -1,28 +1,15 @@
-# ld-agent Python
+# ld-agent-python
 
 **Dynamic linking for agentic systems in Python**
 
-ld-agent-python is the Python implementation of ld-agent, a dynamic linker for AI capabilities. Just like `ld-so` discovers and links shared libraries at runtime, ld-agent discovers and links agentic capabilities to create composable AI systems.
-
-## What is ld-agent?
-
-**ld-agent** is a dynamic linker for agentic systems - think `ld-so` but for AI capabilities instead of shared libraries. Just as `ld-so` discovers, loads, and links shared objects at runtime to create executable programs, ld-agent discovers, loads, and links agentic capabilities at runtime to create composable AI systems.
-
-Like traditional dynamic linkers, ld-agent:
-- **Discovers capabilities** at runtime from standardized locations
-- **Resolves dependencies** and validates compatibility  
-- **Loads modules** into the runtime namespace
-- **Links symbols** (AI tools/functions) for execution
-- **Manages the runtime environment** for loaded capabilities
-
-This enables truly modular AI systems where capabilities can be mixed, matched, and composed dynamically - no recompilation required.
+ld-agent-python is the Python implementation of ld-agent, a dynamic linker for AI capabilities that discovers, loads, and links agentic capabilities at runtime to create composable AI systems.
 
 ## Quick Start
 
 ### 1. Install ld-agent
 
 ```bash
-pip install ld-agent
+pip install ld-agent-python
 ```
 
 ### 2. Use in Your Code
