@@ -1,20 +1,5 @@
 # ld-agent Plugin Specification v1.0
 
-## What is ld-agent?
-
-**ld-agent** is a dynamic linker for agentic systems - think `ld-so` but for AI capabilities instead of shared libraries. Just as `ld-so` discovers, loads, and links shared objects at runtime to create executable programs, ld-agent discovers, loads, and links agentic capabilities at runtime to create composable AI systems.
-
-Like traditional dynamic linkers, ld-agent:
-- **Discovers capabilities** at runtime from standardized locations
-- **Resolves dependencies** and validates compatibility  
-- **Loads modules** into the runtime namespace
-- **Links symbols** (AI tools/functions) for execution
-- **Manages the runtime environment** for loaded capabilities
-
-This enables truly modular AI systems where capabilities can be mixed, matched, and composed dynamically - no recompilation required.
-
----
-
 This document defines the standard architecture and interface requirements for ld-agent plugins. Follow this specification to ensure your plugin is compatible with the ld-agent ecosystem and can be automatically documented, loaded, and managed.
 
 ## 📋 Table of Contents
