@@ -245,7 +245,7 @@ Implementation modules contain the actual business logic and SHOULD follow these
 ### Naming Convention
 
 - Public API function: `your_function_name`
-- Implementation function: `_your_function_name_impl`
+- Implementation function: `_your_function_name_impl` (or imported 'as' this naming convention)
 
 ### Implementation Function Template
 
@@ -279,7 +279,7 @@ def _your_function_name_impl(param1: Type, param2: Optional[Type] = None) -> Ret
 3. **Proper error handling** with logging
 4. **Single responsibility** per function when practical
 5. **Clear documentation** for complex logic
-6. **Consistent naming** with the `_function_name_impl` pattern for functions called from public API
+6. **Consistent naming** with the `_function_name_impl` pattern for functions called from public API. You can absolutely import a function as this descriptor to preserve your original component naming, e.g.: ```from .somemodule import do_stuff as _do_stuff_impl```
 
 ### Flexibility in Implementation
 
