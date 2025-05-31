@@ -1,11 +1,11 @@
 from pydantic_ai import Agent
-from agentkit import load_plugins
+from ldagent import load_plugins
 from dotenv import load_dotenv
 
 load_dotenv()
 tool_plugins = load_plugins()
 
-test_agent = Agent(  
+test_agent = Agent(
     'google-gla:gemini-2.0-flash',
     deps_type=int,
     output_type=bool,

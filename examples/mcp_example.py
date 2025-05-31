@@ -1,7 +1,7 @@
 import os
 import asyncio
 from fastmcp import FastMCP
-from agentkit import load_plugins, create_env_manager
+from ldagent import load_plugins, create_env_manager
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -19,7 +19,7 @@ def authentication_required_wrapper(func):
     @wraps(func)
     async def wrapper(*args, **kwargs):
         try:
-            request: Request = get_http_request()                       
+            request: Request = get_http_request()
             api_key = request.headers.get("Authorization")
             # LOL
             if api_key != f"Bearer {TEST_API_KEY}":
@@ -77,7 +77,7 @@ for tool in tool_plugins.list_tools():
     # Alternatively, you can use the observe decorator to wrap the tools
     #current_tool = observe(current_tool) # Langfuse Wrapper
     mcp.add_tool(current_tool)
-    
+
 
 
 if __name__ == "__main__":
